@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berani Bilang Tidak | Layanan BK Digital</title>
+<style>
+:root{--ink:#19352e;--green:#28684e;--mint:#e5f0ea;--cream:#fbf8f1;--coral:#e8876b;--line:#d9e3dc;--muted:#60736b}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+header{background:var(--mint);padding:22px max(20px,calc((100% - 1050px)/2));display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{font-weight:800;letter-spacing:.2px}nav{display:flex;gap:8px;flex-wrap:wrap}nav button,.btn{border:0;border-radius:999px;padding:10px 15px;background:var(--green);color:white;cursor:pointer;font-weight:700}nav button{background:transparent;color:var(--ink)}nav button:hover,nav button:focus{background:white}
+main{max-width:1050px;margin:auto;padding:24px 20px 55px}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;padding:32px 0 25px}
+.kicker{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:.78rem}h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;margin:10px 0 18px;letter-spacing:-1.5px}h2{line-height:1.2;margin-top:0}h3{margin:5px 0}.hero p{font-size:1.08rem;color:var(--muted)}.hero-art{background:var(--mint);border-radius:28px;padding:28px;text-align:center;font-size:5rem;min-height:230px;display:flex;align-items:center;justify-content:center;flex-direction:column}.hero-art small{font-size:1rem;font-weight:700;max-width:250px}
+.pill{display:inline-block;background:white;border:1px solid var(--line);padding:5px 10px;border-radius:999px;font-size:.8rem;font-weight:700;margin:3px 3px 3px 0}
+section{scroll-margin-top:18px;margin-top:30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:20px}.card p{color:var(--muted);margin-bottom:0}.icon{font-size:1.7rem}.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.scenario{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}.choices{display:grid;gap:9px;margin:16px 0}.choice{padding:12px 14px;text-align:left;background:white;border:1px solid var(--line);border-radius:12px;color:var(--ink);cursor:pointer}.choice:hover,.choice.selected{border:2px solid var(--green);background:var(--mint)}.feedback{margin-top:12px;padding:14px;border-radius:12px;background:var(--mint);display:none}.feedback.show{display:block}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tabs button{padding:9px 13px;border:1px solid var(--line);background:white;border-radius:999px;cursor:pointer}.tabs button.active{background:var(--green);color:white}.lesson{display:none}.lesson.active{display:block}.callout{background:#fff0e9;border-left:4px solid var(--coral);padding:14px 16px;border-radius:8px}.field{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;margin:6px 0 12px;background:white}textarea.field{min-height:95px}.result{font-weight:700;color:var(--green);margin-top:10px}.footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.9rem;margin-top:40px}
+@media(max-width:720px){.hero,.grid,.split{grid-template-columns:1fr}.hero-art{min-height:160px}.hero-art .emoji{font-size:4rem}header{align-items:flex-start}nav{width:100%}nav button{padding:8px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🌿 Berani Bilang Tidak</div>
+  <nav aria-label="Navigasi utama">
+    <button onclick="go('beranda')">Beranda</button>
+    <button onclick="go('belajar')">Belajar</button>
+    <button onclick="go('simulasi')">Simulasi</button>
+    <button onclick="go('latihan')">Latihan</button>
+  </nav>
+</header>
+<main>
+<section id="beranda" class="hero">
+ <div>
+  <div class="kicker">Layanan BK Digital · Pribadi-Sosial</div>
+  <h1>Kamu boleh baik hati, tanpa harus selalu berkata “iya”.</h1>
+  <p>Belajar menyampaikan batasan dengan jelas, sopan, dan tetap menghargai orang lain. Mulai dari langkah kecil—berani jujur pada kebutuhan diri sendiri.</p>
+  <button class="btn" onclick="go('belajar')">Mulai belajar →</button>
+  <div style="margin-top:15px"><span class="pill">Kenali diri</span><span class="pill">Latihan asertif</span><span class="pill">Pertemanan sehat</span></div>
+ </div>
+ <div class="hero-art"><div class="emoji">🗣️ 🌱</div><small>“Aku menghargaimu, dan aku juga menghargai diriku.”</small></div>
+</section>
+<section>
+ <div class="kicker">Tujuan layanan</div><h2>Setelah menggunakan layanan ini, kamu diharapkan mampu…</h2>
+ <div class="grid">
+  <div class="card"><div class="icon">🔎</div><h3>Mengenali pola</h3><p>Mengenali situasi ketika kamu berkata “iya” padahal sebenarnya keberatan.</p></div>
+  <div class="card"><div class="icon">💬</div><h3>Memahami asertif</h3><p>Membedakan respons pasif, agresif, dan asertif dalam pergaulan.</p></div>
+  <div class="card"><div class="icon">🧭</div><h3>Berlatih menolak</h3><p>Menyusun penolakan yang tegas, sopan, dan sesuai situasi.</p></div>
+ </div>
+</section>
+<section id="belajar">
+ <div class="kicker">Menu 1</div><h2>Belajar mengenali people pleasing</h2>
+ <div class="split">
+  <div class="card"><h3>Apa itu people pleasing?</h3><p>Istilah ini menggambarkan kecenderungan berusaha menyenangkan orang lain, terkadang dengan mengabaikan kebutuhan atau batasan diri. Ini bukan diagnosis psikologis, dan membantu orang lain tidak otomatis berarti people pleasing.</p><div class="callout"><strong>Ingat:</strong> Kamu bisa peduli kepada teman sekaligus menjaga batasanmu sendiri.</div></div>
+  <div class="card"><h3>Tiga gaya komunikasi</h3>
+   <p><strong>Pasif:</strong> kebutuhan sendiri tidak disampaikan.</p>
+   <p><strong>Agresif:</strong> menyampaikan keinginan dengan menyerang atau merendahkan.</p>
+   <p><strong>Asertif:</strong> menyampaikan pikiran dan batasan secara jelas, tegas, dan menghormati orang lain.</p>
+  </div>
+ </div>
+ <div class="tabs" style="margin-top:18px"><button class="active" onclick="lesson('formula',this)">Rumus kalimat</button><button onclick="lesson('contoh',this)">Contoh penolakan</button></div>
+ <div id="formula" class="card lesson active"><h3>Rumus sederhana: apresiasi + batasan + alternatif (jika mau)</h3><p>“Makasih sudah percaya sama aku. Aku belum bisa membantu mengerjakan tugasmu, tetapi aku bisa menemanimu memahami soalnya selama 10 menit.”</p><p>Alternatif tidak wajib. Kamu boleh menolak tanpa menawarkan pengganti.</p></div>
+ <div id="contoh" class="card lesson"><h3>Contoh kalimat yang bisa dicoba</h3><ul><li>“Maaf, kali ini aku tidak bisa ikut.”</li><li>“Aku kurang nyaman membahas hal itu.”</li><li>“Aku perlu menyelesaikan urusanku dulu.”</li><li>“Aku paham kamu butuh bantuan, tetapi aku tidak bisa melakukannya sekarang.”</li></ul></div>
+</section>
+<section id="simulasi">
+ <div class="kicker">Menu 2 · Simulasi interaktif</div><h2>Pilih responsmu</h2>
+ <p>Pilih respons yang menurutmu paling asertif. Baca umpan baliknya, lalu pikirkan bagaimana kamu akan merespons di kehidupan nyata.</p>
+ <div class="scenario">
+  <span class="pill">Skenario 1 dari 3</span><h3 id="scenarioTitle">Teman meminta jawaban tugas</h3>
+  <p id="scenarioText">“Kirim semua jawabanmu, dong. Kalau kamu teman baikku, pasti mau membantu.”</p>
+  <div class="choices" id="choices"></div><div id="feedback" class="feedback" aria-live="polite"></div>
+  <div style="display:flex;justify-content:space-between;gap:10px;margin-top:15px"><button class="btn" style="background:#60736b" onclick="prevScenario()">← Sebelumnya</button><button class="btn" onclick="nextScenario()">Berikutnya →</button></div>
+  <p id="progress" class="result">Skenario 1 dari 3</p>
+ </div>
+</section>
+<section id="latihan">
+ <div class="kicker">Menu 3 · Praktik mandiri</div><h2>Susun kalimat “berani bilang tidak”</h2>
+ <div class="split">
+  <div class="card"><h3>Situasi latihan</h3><p>Teman mengajakmu pergi saat kamu perlu istirahat dan menyelesaikan tugas. Kamu ingin menolak tanpa menyakiti perasaannya.</p><label for="draft"><strong>Tulis responsmu</strong></label><textarea id="draft" class="field" placeholder="Contoh: Makasih sudah mengajak..."></textarea><button class="btn" onclick="checkDraft()">Lihat pengingat</button><div id="draftResult" class="result" aria-live="polite"></div></div>
+  <div class="card"><h3>Cek sebelum menyampaikan</h3><p>Pastikan kalimatmu:</p><ul><li>Jelas menyatakan keputusanmu.</li><li>Tidak menghina atau menyalahkan teman.</li><li>Tidak memberi janji yang tidak sanggup kamu tepati.</li><li>Tetap aman untuk situasi yang sedang dihadapi.</li></ul><div class="callout">Kamu tidak harus membuat semua orang senang dengan keputusanmu. Jika menolak terasa tidak aman, cari dukungan orang dewasa tepercaya.</div></div>
+ </div>
+</section>
+<section id="evaluasi">
+ <div class="kicker">Menu 4 · Evaluasi pemahaman</div><h2>Cek pemahamanmu</h2>
+ <div class="scenario">
+  <p><strong>1.</strong> Komunikasi asertif berarti…</p>
+  <label><input type="radio" name="q1" value="a"> Selalu menuruti permintaan teman.</label><br>
+  <label><input type="radio" name="q1" value="b"> Menyampaikan batasan dengan jelas dan tetap menghargai orang lain.</label><br>
+  <label><input type="radio" name="q1" value="c"> Membalas dengan kata-kata kasar agar teman paham.</label>
+  <p><strong>2.</strong> Apakah kamu wajib menawarkan alternatif setiap kali menolak?</p>
+  <label><input type="radio" name="q2" value="a"> Ya, selalu.</label><br>
+  <label><input type="radio" name="q2" value="b"> Tidak, alternatif boleh diberikan jika memang mau dan mampu.</label><br>
+  <label><input type="radio" name="q2" value="c"> Ya, supaya teman tidak kecewa.</label><br><br>
+  <button class="btn" onclick="scoreQuiz()">Periksa hasil</button><div id="quizResult" class="result" aria-live="polite"></div>
+ </div>
+</section>
+<div class="footer"><strong>Catatan:</strong> Media ini adalah prototipe edukasi, bukan alat diagnosis atau pengganti konseling. Jika kamu merasa tertekan, mengalami pemaksaan, atau tidak aman, hubungi guru BK, orang dewasa tepercaya, atau layanan bantuan yang sesuai. <br><br>Disusun sebagai rancangan layanan Bimbingan dan Konseling pribadi-sosial.</div>
+</main>
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+function lesson(id,btn){document.querySelectorAll('.lesson').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');}
+const scenarios=[
+{title:'Teman meminta jawaban tugas',text:'“Kirim semua jawabanmu, dong. Kalau kamu teman baikku, pasti mau membantu.”',choices:[
+['A. “Iya, aku kirim semuanya,” meskipun keberatan.','Kurang asertif. Kamu mengabaikan batasanmu sendiri karena tekanan.'],
+['B. “Jangan malas! Kerjakan sendiri!”','Ini cenderung agresif karena merendahkan teman.'],
+['C. “Aku nggak bisa memberikan semua jawaban, tapi kita bisa bahas soalnya bersama.”','Tepat! Kamu menetapkan batasan dengan jelas dan menawarkan bantuan yang tetap sesuai.'],
+['D. Mengabaikan pesan tanpa menjelaskan.','Menghindar bisa terjadi saat tidak nyaman, tetapi belum melatih penyampaian batasan secara jelas.']]},
+{title:'Teman meminta bantuan saat kamu kewalahan',text:'“Tolong kerjakan bagianku juga, ya. Aku tahu kamu pasti mau.”',choices:[
+['A. “Oke,” lalu mengorbankan semua waktu istirahatmu.','Kamu belum mempertimbangkan kebutuhan dan batasan diri.'],
+['B. “Aku juga punya tanggung jawab sendiri. Aku nggak bisa mengerjakan bagianmu.”','Tepat! Ini jelas dan tegas. Kamu boleh berhenti di sini tanpa menawarkan alternatif.'],
+['C. “Kamu selalu merepotkan!”','Ini menyerang orangnya, bukan menyampaikan batasan.'],
+['D. Setuju, lalu mengeluh tentang teman ke orang lain.','Kebutuhanmu belum disampaikan langsung sehingga masalah bisa berlanjut.']]},
+{title:'Tekanan untuk ikut nongkrong',text:'“Ayolah ikut! Kalau nggak ikut, kamu bukan bagian dari geng kita.”',choices:[
+['A. “Aku nggak ikut kali ini karena perlu istirahat. Semoga kalian bersenang-senang.”','Tepat! Kamu menyampaikan keputusan dengan sopan tanpa harus membuktikan pertemanan.'],
+['B. Ikut meski tidak nyaman karena takut dikucilkan.','Kamu boleh mempertimbangkan perasaanmu, tetapi tidak wajib mengiyakan karena tekanan.'],
+['C. “Aku nggak butuh teman seperti kalian!”','Ini dapat memperkeruh situasi dan tidak menyampaikan batasan secara tenang.'],
+['D. Berbohong bahwa kamu sakit padahal tidak.','Berbohong mungkin terasa lebih mudah, tetapi menyampaikan batasan jujur dan aman lebih baik bila memungkinkan.']]}
+];
+let idx=0;
+function renderScenario(){let s=scenarios[idx];document.getElementById('scenarioTitle').textContent=s.title;document.getElementById('scenarioText').textContent=s.text;document.getElementById('progress').textContent=`Skenario ${idx+1} dari ${scenarios.length}`;document.querySelector('.scenario .pill').textContent=`Skenario ${idx+1} dari ${scenarios.length}`;let c=document.getElementById('choices');c.innerHTML='';s.choices.forEach((x,i)=>{let b=document.createElement('button');b.className='choice';b.textContent=x[0];b.onclick=()=>{c.querySelectorAll('button').forEach(y=>y.classList.remove('selected'));b.classList.add('selected');let f=document.getElementById('feedback');f.textContent=x[1];f.classList.add('show')};c.appendChild(b)});document.getElementById('feedback').classList.remove('show');document.getElementById('feedback').textContent='';}
+function nextScenario(){idx=(idx+1)%scenarios.length;renderScenario()}function prevScenario(){idx=(idx+scenarios.length-1)%scenarios.length;renderScenario()}
+function checkDraft(){let t=document.getElementById('draft').value.trim();let r=document.getElementById('draftResult');if(!t){r.textContent='Tulis dulu kalimatmu, lalu periksa kembali dengan panduan di samping.';return}r.textContent='Bagus, kamu sudah berlatih. Periksa lagi: apakah keputusanmu jelas, sopan, dan tidak menjanjikan sesuatu yang tidak kamu inginkan? Ini refleksi mandiri, bukan penilaian otomatis atas kualitas kalimat.';}
+function scoreQuiz(){let a=document.querySelector('input[name="q1"]:checked');let b=document.querySelector('input[name="q2"]:checked');let r=document.getElementById('quizResult');if(!a||!b){r.textContent='Jawab kedua pertanyaan terlebih dahulu.';return}let n=(a.value==='b'?1:0)+(b.value==='b'?1:0);r.textContent=`Skor: ${n}/2. `+(n===2?'Bagus! Kamu memahami prinsip dasar komunikasi asertif.':'Pelajari kembali bagian “Belajar Komunikasi Asertif”, lalu coba lagi.');}
+renderScenario();
+</script>
+</body>
+</html>
